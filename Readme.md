@@ -1,7 +1,7 @@
 # Docker-tools
 Contains some bash/sh scripts for docker
 
-### backup-volumes-sh
+### backup-volumes.sh
 - Backup all volumes or selected volume(s)
 
 ### backup-containers-volumes.sh
