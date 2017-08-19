@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script allows you to backup all volumes in a tar.gz files
+# This script allows you to backup all volumes in tar.gz files
 
 BACKUP_PATH="/home/user/Backup/"
 #DATE=$(date +"%d-%m-%Y_%H-%M-%S")
@@ -19,7 +19,6 @@ do
     FILENAME="${VOLUME_NAME}_${DATE}.tar.gz"
     
     echo "Backup docker's volume(s) : "$VOLUME_NAME
-    printf "\n"
 
     CHECK_RUNNING=$(docker ps --filter "status=running" --filter "volume=$VOLUME_NAME" -q)
 
@@ -29,17 +28,15 @@ do
         docker pause $CHECK_RUNNING >> /dev/null
     fi
 
-    echo "Backup Volume from "$VOLUME_NAME" container"
+    echo "-Backup Volume from "$VOLUME_NAME" container"
     docker run --rm -v $VOLUME_NAME:/tmp/$VOLUME_NAME -v "$BACKUP_PATH":/backup ubuntu tar -C "/tmp/" -P -czf "/backup/$FILENAME" "$VOLUME_NAME" >> /dev/null
-
+    echo "-Output file name : "$FILENAME
+    
     if [ ! -z "$CHECK_RUNNING" ]
     then
         echo "Unpause docker container : "$CHECK_RUNNING
         docker unpause $CHECK_RUNNING >> /dev/null
     fi
-    
-    echo "Output file name : "$FILENAME
-
-    echo "Done."
+    printf "\n"
 
 done

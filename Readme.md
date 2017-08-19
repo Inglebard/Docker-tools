@@ -8,4 +8,7 @@ Contains some bash/sh scripts for docker
 - Backup all exposed volumes from all containers or selected container(s)
 
 ### backup-containers-mounts.sh
-- Todo maybe
+- Backup all (bind/volume) volumes from all containers or selected container(s)
+
+### backup-all.sh
+- Backup all (bind/volume) volumes from all containers and volumes without containers
