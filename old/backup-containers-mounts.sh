@@ -4,7 +4,7 @@
 command -v jq >/dev/null 2>&1 || { echo >&2 "I require jq but it's not installed.  Aborting."; exit 1; }
 command -v basename >/dev/null 2>&1 || { echo >&2 "I require basename but it's not installed.  Aborting."; exit 1; }
 
-BACKUP_PATH="/home/user/Backup/"
+BACKUP_PATH="/path/to/Backup/"
 #DATE=$(date +"%d-%m-%Y_%H-%M-%S")
 DATE=$(date +"%A")
 

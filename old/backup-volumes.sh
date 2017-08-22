@@ -1,7 +1,7 @@
 #!/bin/bash
 # This script allows you to backup all volumes in tar.gz files
 
-BACKUP_PATH="/home/user/Backup/"
+BACKUP_PATH="/path/to/Backup/"
 #DATE=$(date +"%d-%m-%Y_%H-%M-%S")
 DATE=$(date +"%A")
 

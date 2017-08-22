@@ -1,0 +1,13 @@
+[
+{
+	"Type" : "bind",
+	"Value" : "/etc/localtime"
+},
+{
+	"Type" : "bind",
+	"Value" : "/home/david/Downloads/Transmission"
+},
+{
+	"Type" : "volume",
+	"Value" : "nextcloud"
+}]
