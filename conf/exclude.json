@@ -1,11 +1,11 @@
 [
 {
-	"Type" : "bind",
-	"Value" : "/etc/localtime"
+	"Type" : "container",
+	"Value" : "bb61dc7d24ad"
 },
 {
 	"Type" : "bind",
-	"Value" : "/home/david/Downloads/Transmission"
+	"Value" : "/home/user/Downloads/Transmission"
 },
 {
 	"Type" : "volume",
